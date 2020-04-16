@@ -72,11 +72,8 @@ const checkForWin = () => {
 const ticTacToe = (row, column) => {
   // Your code here to place a marker on the board
   // then check for a win
-  // while (checkForWin != true)
-  // {
     if (board[row][column] != ' ') {
       console.log("Invalid move.");
-      // getPrompt();
     }
     else {
       board[row][column] = playerTurn;
