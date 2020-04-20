@@ -10,6 +10,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+
 // creates and empty "board" for the user to see where marks can be placed.
 // using let because the variable is expected to change with more 'X's and 'O's to add
 let board = [
@@ -21,6 +22,7 @@ let board = [
 // assigns the first mark as 'X'
 // using let because the variable is expected to change from 'X' to 'O' and back
 let playerTurn = 'X';
+
 
 // is a function that print the current status of the board using the variable - board
 const printBoard = () => {
@@ -69,6 +71,7 @@ const checkForWin = () => {
   }
 }
 
+
 const ticTacToe = (row, column) => {
   // Your code here to place a marker on the board
   // then check for a win
@@ -89,8 +92,8 @@ const ticTacToe = (row, column) => {
     } 
 
   }
-   
-// }
+
+
 
 const getPrompt = () => {
   printBoard();
