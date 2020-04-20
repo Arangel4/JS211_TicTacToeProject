@@ -30,7 +30,7 @@ const addMarker = (id) => {
   console.log(`We'll place a mark on square: ${id}`)
   // @TODO, Mix & Match. 
   // You will need the following pieces:
-  
+  document.getElementById(id).innerHTML = currentMarker;
   // = currentMarker
   // .getElementById(id)
   // document
@@ -51,6 +51,7 @@ const updateBoard = (id) => {
 
   // @TODO, Your code here: use the above information to change the board variable(array of arrays)
   // HINT: in your browser open up the dev tools -> console
+  
 }
 
 const checkForWin = () => {
@@ -66,14 +67,28 @@ const checkForWin = () => {
 
 const horizontalWin = () => {
   // @TODO, Your code here: to check for horizontal wins
+  for (let i = 0; i < 3; i++) {
+    if (((board[i][0] === board[i][1]) && (board[i][1] === board[i][2])) && board[i][0] !== ' ') {
+      return true;
+    }
+  }
 }
 
 const verticalWin = () => {
   // @TODO, Your code here: to check for vertical wins
+  // for(let i = 0; i < 3; i++) {
+  //   if(((board[0][i] === board[1][i]) && (board[1][i] === board[2][i])) && board[0][i] !== ' ') {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 }
 
 const diagonalWin = () => {
   // @TODO, Your code here: to check for diagonal wins
+  // if((((board[0][0] === board[1][1]) && (board[1][1] === board[2][2])) && (board[0][0]!== ' ')) ||
+  // ((board[2][0] === board[1][1]) && (board[1][1] === board[0][2]))&&(board[2][0]!== ' ')) 
+  // return true;
 }
 
 const changeMarker = () => {
